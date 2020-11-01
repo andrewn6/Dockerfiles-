@@ -1,5 +1,11 @@
-name: Github-packages
+
+name: Github-Packages
 on:
-push:
-	branches:
-	  - main
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+     
