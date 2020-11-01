@@ -1,1 +1,5 @@
-
+name: Github-packages
+on:
+push:
+	branches:
+	  - main
