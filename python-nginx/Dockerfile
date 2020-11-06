@@ -8,6 +8,6 @@ LABEL description  "Alpine image with ptyhon3 with nginx"
 
 
 # Install nginx
-RUN apt add --no--cache nginx
+RUN apt install --no--cache nginx
 
 CMD ["nginx", "--version"]
