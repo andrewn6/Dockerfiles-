@@ -8,7 +8,7 @@ LABEL description  "Alpine image with ptyhon3 with nginx"
 
 
 # Install nginx
-RUN pkg install node
+RUN apt install node
 RUN cd /usr/ports/www/node && make install
 
 CMD ["nginx", "--version"]
