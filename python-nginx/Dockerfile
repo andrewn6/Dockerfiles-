@@ -8,8 +8,7 @@ LABEL description  "Alpine image with ptyhon3 with nginx"
 
 
 # Install nginx
-RUN nginx=stable # use nginx=development for latest development version
-RUN add-apt-repository ppa:nginx/$nginx
-RUN apt-get install nginx
+RUN nginx=stable 
+RUN /bin/sh -c apt install nginx
 
 CMD ["nginx", "--version"]
