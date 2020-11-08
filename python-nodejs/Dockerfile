@@ -1,4 +1,4 @@
-# This image comes with python3 and nginx installed!
+# This image comes with python3 and nodejs installed!
 # Im the maintainer of this image Andrew Nijmeh :)
 
 FROM python:3.7.8
@@ -8,7 +8,7 @@ LABEL description  "Alpine image with ptyhon3 with nginx"
 
 
 # Install nginx
-RUN nginx=stable 
-RUN /bin/sh -c apt install nginx
+RUN pkg install node
+RUN cd /usr/ports/www/node && make install
 
 CMD ["nginx", "--version"]
